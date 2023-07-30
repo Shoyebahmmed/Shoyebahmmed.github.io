@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoyeb Ahmmed</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <div class="head" id="home">
+        <div class="top_bar">
+            <div class="title_name">
+                <a href="#" onclick="reloadPage()">
+                  <span class="first_name">Sho</span><span class="last_name">yeb</span>
+                </a>
+              </div>
+              
+            <div class="nav">
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <img class="profile_pic" src="shoyeb_removeBG_2.png" alt="Shoyeb Ahmmed">
+
+          <div class="intro">
+            <span class="expertise">
+                Software Developer
+            </span>
+            <br><br>
+            <span class="wellcome">
+                Hi, I'm <span class="name">Shoyeb Ahmmed</span>
+            </span>
+            <br>
+            a creative problem solver, 
+            tech explorer, and a proud Computer Science graduate. 
+            Join me as we push the boundaries of imagination and craft extraordinary digital solutions together.
+            
+          </div>
+    </div>
+
+    <div class="body">
+        <h2 class="aboutTitle">About Me</h2>
+        <div class="about-me">
+            <div class="about-pic">
+                <img src="about.jpg" alt="Profile Picture">
+              </div>
+            <div class="about-me-content">
+              
+              <div class="about-info">
+                <p>
+                    Hello, I'm Shoyeb Ahmmed, a creative problem solver and tech enthusiast. 
+                    Armed with a Bachelor's degree in Computer Science, my passion lies in web 
+                    and mobile application development, where I love pushing the boundaries of 
+                    imagination to craft extraordinary digital solutions. From Java, C, C++ to 
+                    CSS, HTML, and JavaScript, I thrive in utilizing various programming languages 
+                    and frameworks. Throughout my academic journey, I've tackled challenging 
+                    projects, such as designing and developing a Kid Nursery Management 
+                    Application and an Asthma Management Application, both of which received 
+                    widespread acclaim. As a recent graduate, I am eager to join a dynamic team, 
+                    collaborate with experienced professionals, and contribute my expertise in 
+                    UI/UX design and backend development. Let's embark on this exciting journey 
+                    together and create innovative solutions that leave a positive impact on the 
+                    world.
+                </p>
+            </div>  
+            <div class="about-links" id="about">
+                <a href="#" onclick="showEducation(event)" id="education-link">Education</a>
+                <a href="#" onclick="showProjects(event)" id="projects-link">Projects</a>
+                <a href="#" onclick="showSkills(event)" id="skills-link">Skills</a>
+            </div>
+            
+        <div class="details"><p></p></div>
+    </div>
+      </div>
+    </div>
+
+
+    <div class="contact-section" id="contact">
+        <h2 class="cont_title">Contact Me</h2>
+        <p style="font-size: 14px; margin-bottom: 20px;">Feel free to reach out to me using any of these contact options:</p>
+        <div class="contact-social">
+            <a href="mailto:ahmmad.ef22@gmail.com" target="_blank" rel="noopener noreferrer">
+                <img src="email.png" alt="Gmail">
+            </a>
+            <a href="https://www.linkedin.com/in/shoyebahmmed/" target="_blank" rel="noopener noreferrer">
+                <img src="linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100006007036837" target="_blank" rel="noopener noreferrer">
+                <img src="facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/shoyebahmmad/" target="_blank" rel="noopener noreferrer">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://github.com/Shoyebahmmed" target="_blank" rel="noopener noreferrer">
+                <img src="github.png" alt="GitHub">
+            </a>
+        </div>
+        <p style="font-size: 14px; margin-top: 20px;">I'm looking forward to hearing from you!</p>
+    </div>
+
+
+
+<!-- 
+    <div class="message">
+        <h2 class="message-title">Give <span class="me-style">Your</span> Comment</h2>
+        <div class="contact-form">
+            <form id="contact-form" action="#" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+    
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <div class="send-button-container">
+                    <button type="submit" id="sendButton" style="display: none;" class="send-button">
+                        <span class="send-text">Send</span>
+                        <img src="send.png" alt="Image" class="send-image">
+                    </button>
+                </div>
+                
+                
+                
+            </form>
+        </div>
+    </div> -->
+    
+    
+
+
+    
+    
+
+</body>
+
+<script>
+
+// const nameInput = document.getElementById('name');
+// const subjectInput = document.getElementById('subject');
+// const messageInput = document.getElementById('message');
+// const sendButton = document.getElementById('sendButton');
+
+// [nameInput, subjectInput, messageInput].forEach((input) => {
+//     input.addEventListener('input', validateForm);
+// });
+
+// function validateForm() {
+//     const nameValue = nameInput.value;
+//     const subjectValue = subjectInput.value;
+//     const messageValue = messageInput.value;
+
+//     if (nameValue.trim() !== '' && subjectValue.trim() !== '' && messageValue.trim() !== '') {
+//         sendButton.style.display = 'block';
+//     } else {
+//         sendButton.style.display = 'none';
+//     }
+// }
+
+function reloadPage() {
+    location.reload();
+  }
+
+  // Function to handle smooth scrolling to the target element
+  function smoothScrollTo(target) {
+    const element = document.querySelector(target);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  }
+
+  // Function to handle the click event on navigation links
+  function handleNavClick(event) {
+    event.preventDefault();
+    const target = event.target.getAttribute('href');
+    smoothScrollTo(target);
+  }
+
+  // Attach event listeners to navigation links
+  const navLinks = document.querySelectorAll('.nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', handleNavClick);
+  });
+
+
+
+function showEducation(event) {
+
+    const education = `
+    <div class="education">
+        <ul class="education-list">
+        <li class="education-item">
+            <h3>University of Wollongong - Bachelor of Computer Science</h3>
+            <p>2022 – 2023</p>
+            <p>Completed all subjects and awaiting results. Expected completion of Master's degree in 2025.</p>
+        </li>
+        <li class="education-item">
+            <h3>University of Wollongong in Dubai - Bachelor of Computer Science</h3>
+            <p>2019 – 2021</p>
+            <p>Finished my 3rd year and transferred to the University of Wollongong, Australia.</p>
+        </li>
+        <li class="education-item">
+            <h3>Dr. Mahbubur Rahman Mollah College - Higher Secondary Certificate</h3>
+            <p>2015 – 2017</p>
+            <p>Completed my H.S.C. in Science from Bangladesh with a GPA of 4.5.</p>
+        </li>
+        <!-- Add more education entries if needed -->
+        </ul>
+    </div>
+    `;
+
+  // Prevent the default link behavior
+  event.preventDefault();
+  // Update the content based on the selected link
+  document.querySelector('.about-pic img').src = 'education.jpg';
+//   document.querySelector('.about-info h2').textContent = 'Education';
+  document.querySelector('.details p').innerHTML = education;
+  document.getElementById('education-link').classList.add('active');
+    document.getElementById('projects-link').classList.remove('active');
+    document.getElementById('skills-link').classList.remove('active');
+}
+
+function showProjects(event) {
+
+    const projects = `
+    <div class="projects">
+        <ul class="project-list">
+            <li class="project-item">
+                <h3>Library Management Project (Individual)</h3>
+                <p>I completed this assignment as part of one of my university courses. The task was to create a web application for managing libraries within a two-week deadline. I successfully designed the database, implemented the required functions, and utilized PHP for backend development. While I focused more on functionality than UI due to time constraints, I managed to complete the project with a score of 70%.</p>
+                <p>Results: Scored 70%</p>
+            </li>
+            <li class="project-item">
+                <h3>Safe Password (Individual)</h3>
+                <p>This project was done for the System Security course's final assignment. The objective was to create a system that prevents users from using frequently used passwords. I used Java to find a solution, generating random strings of 20 characters as salt and creating new passwords that combine salt and user passwords to store them securely. The project met all the requirements and received a score of 92%.</p>
+                <p>Results: Scored 92%</p>
+            </li>
+            <li class="project-item">
+                <h3>Kid Nursery Management Application (Group)</h3>
+                <p>This mobile application development project was done in a group of three. As the team leader, I focused on database work, charging and discounting users, generating statements, and searching for users. We used Android Studio and Java to create the app, which had a local database for data storage. Our teamwork and emphasis on user-friendly interface design contributed to the project's success, earning a score of 95%.</p>
+                <p>Results: Scored 95%</p>
+            </li>
+            <li class="project-item">
+                <h3>Asthma Management Application (Group)</h3>
+                <p>This significant project involved designing and developing an innovative application, serving as the final requirement for my bachelor's degree. As the team leader, I guided a group of six members throughout the project, using Adobe XD for design, React Native for frontend, and Node.js for the backend. The project received widespread acclaim, and our team was awarded the first prize for our outstanding achievements.</p>
+                <p>Results: First prize in the competition</p>
+            </li>
+        </ul>
+    </div>
+`;
+
+  // Prevent the default link behavior
+  event.preventDefault();
+  // Update the content based on the selected link
+  document.querySelector('.about-pic img').src = 'projects.jpg';
+//   document.querySelector('.about-info h2').textContent = 'Projects';
+  document.querySelector('.details p').innerHTML = projects;
+  document.getElementById('education-link').classList.remove('active');
+    document.getElementById('projects-link').classList.add('active');
+    document.getElementById('skills-link').classList.remove('active');
+}
+
+function showSkills(event) {
+    const programmingSkills = `
+<div class="skills-item">
+    <h3>Programming Languages</h3>
+    <p>Java - 80%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 80%"></div>
+        <div class="skill-left"></div>
+    </div>
+    <p>C - 70%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 70%"></div>
+        <div class="skill-left"></div>
+    </div>
+    <p>C++ - 75%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 75%"></div>
+        <div class="skill-left"></div>
+    </div>
+    <p>Python - 85%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 85%"></div>
+        <div class="skill-left"></div>
+    </div>
+</div>
+`;
+
+const webDevelopmentSkills = `
+<div class="skills-item">
+    <h3>Web Development</h3>
+    <p>HTML - 90%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 90%"></div>
+        <div class="skill-left"></div>
+    </div>
+    <p>CSS - 85%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 85%"></div>
+        <div class="skill-left"></div>
+    </div>
+    <p>JavaScript - 80%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 80%"></div>
+        <div class="skill-left"></div>
+    </div>
+    <p>PHP - 70%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 70%"></div>
+        <div class="skill-left"></div>
+    </div>
+    <p>React - 75%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 75%"></div>
+        <div class="skill-left"></div>
+    </div>
+    <p>React Native - 80%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 80%"></div>
+        <div class="skill-left"></div>
+    </div>
+    <p>Node.js - 70%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 70%"></div>
+        <div class="skill-left"></div>
+    </div>
+</div>
+`;
+
+const databaseSkills = `
+<div class="skills-item">
+    <h3>Database Management</h3>
+    <p>MySQL - 85%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 85%"></div>
+        <div class="skill-left"></div>
+    </div>
+    <p>MongoDB - 75%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 75%"></div>
+        <div class="skill-left"></div>
+    </div>
+    <p>AWS RDS - 70%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 70%"></div>
+        <div class="skill-left"></div>
+    </div>
+    <p>Firebase - 80%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 80%"></div>
+        <div class="skill-left"></div>
+    </div>
+</div>
+`;
+
+
+const otherSkills = `
+<div class="skills-item">
+    <h3>Other Skills</h3>
+    <p>UI/UX Design - 75%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 75%"></div>
+        <div class="skill-left"></div>
+    </div>
+    <p>Git - 80%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 80%"></div>
+        <div class="skill-left"></div>
+    </div>
+    <p>Agile Development - 70%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 70%"></div>
+        <div class="skill-left"></div>
+    </div>
+    <p>Problem Solving - 85%</p>
+    <div class="skill-bar">
+        <div class="skill-progress" style="--skill-width: 85%"></div>
+        <div class="skill-left"></div>
+    </div>
+</div>
+`;
+
+  // Prevent the default link behavior
+  event.preventDefault();
+  // Update the content based on the selected link
+  document.querySelector('.about-pic img').src = 'skills.jpg';
+//   document.querySelector('.about-info h2').textContent = 'Skills';
+  document.querySelector('.details p').innerHTML = programmingSkills + webDevelopmentSkills + databaseSkills + otherSkills;
+  document.getElementById('education-link').classList.remove('active');
+    document.getElementById('projects-link').classList.remove('active');
+    document.getElementById('skills-link').classList.add('active');
+}
+
+
+</script>
+
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+    }
+    </style>
+
+</html>

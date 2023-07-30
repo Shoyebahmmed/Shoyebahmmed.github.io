@@ -1,0 +1,412 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #333;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .head {
+    height: 1000px;
+    position: relative;
+  }
+  
+  .top_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    position: relative;
+    z-index: 2; /* Add a higher z-index to ensure it appears above the image */
+  }
+  
+  .title_name {
+    padding-left: 40px;
+    font-family: "Optima", sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+  }
+
+  .title_name a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .first_name {
+    color: #fff;
+  }
+  
+  .last_name {
+    color: rgb(255, 91, 3);
+  }
+  
+  .nav ul {
+    font-family: Courier, monospace;
+    list-style: none;
+    display: flex;
+    gap: 70px;
+    margin: 0;
+  }
+  
+  .nav li {
+    border-bottom: none;
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav a::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100px;
+    background-color: rgb(255, 91, 3);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .profile_pic {
+    position: absolute;
+    top: 0;
+    right: 250px;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    filter: drop-shadow(-60px -70px 250px rgb(80, 80, 80));
+    z-index: 1; /* Set a lower z-index for the image */
+  }
+
+  .intro {
+    color: #fff;
+    font-size: 20   px;
+    margin-top: 12%;
+    margin-left: 45px;
+    width: 40%;
+    font-family: "Optima", sans-serif;
+  }
+  
+  .expertise {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+
+  .wellcome {
+    margin-top: 20px;
+    font-size: 80px;
+  }
+
+  .name {
+    color: rgb(255, 91, 3);
+    font-weight: bolder;
+  }
+  
+  .body {
+    height: fit-content;
+    background-color: #f0f0f0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative; /* Add relative positioning to the .body */
+  }
+  
+  /* Styles for the About Me section */
+  .about-me {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .aboutTitle {
+    font-size: 35px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .about-pic {
+    flex: 1;
+    margin-top: 20px;
+    position: absolute; /* Add absolute positioning to the .about-pic */
+    top: 100px; /* Adjust the top position as needed */
+  }
+  
+  .about-pic img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-me-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin-left: 320px; /* Add a margin-right to create space between the image and content */
+  }
+  
+  
+  .about-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .about-links {
+    display: flex;
+    margin-top: 20px;
+}
+
+.about-links a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-links a:not(:last-child) {
+    margin-right: 70px;
+}
+
+.about-links a::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100px;
+    background-color: rgb(255, 91, 3);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.about-links a:hover::after,
+.about-links a.active::after { /* Added the active style here */
+    transform: scaleX(1);
+}
+
+.about-links a:hover,
+.about-links a.active { /* Added the active style here */
+    color: #333;
+}
+
+  /* Styles for the Education section */
+.education {
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  
+  .education-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .education-item {
+    margin-bottom: 20px;
+  }
+  
+  .education-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  .education-item p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 4px;
+  }
+
+  /* CSS for Projects section */
+  .projects {
+    margin-top: 50px;
+  }
+  
+  .project-item {
+    margin-bottom: 30px;
+  }
+  
+  .project-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .project-item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+/* Styles for the Skills section */
+.skills-item {
+    margin-bottom: 20px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #d3d3d3;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: rgb(255, 91, 3);
+    width: 0; /* Set initial width to 0 */
+    position: absolute;
+    border-radius: 5px;
+    animation: fillAnimation 2s ease forwards; /* Apply the animation */
+}
+
+.skill-left {
+    height: 100%;
+    background-color: #d3d3d3;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.skills-item p {
+    margin: 5px 0;
+}
+
+@keyframes fillAnimation {
+    to {
+        width: var(--skill-width, 100%); /* Fill to the specified width */
+    }
+}
+
+.contact-section {
+    background-color: rgb(255, 91, 3);
+    text-align: center;
+    padding: 40px 0;
+    padding-bottom: 100px;
+}
+
+.contact-social {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+.contact-social a {
+    display: inline-block;
+    margin: 5px;
+}
+
+.contact-social img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.cont_title {
+  font-size: 35px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 400px;
+    margin-left: 100px;
+}
+/* 
+.message {
+  background-color: #000000;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.me-style {
+  color: rgb(255, 119, 0);
+}
+.message-title {
+  color: #fff;
+  font-size: 35px;
+  margin-right: 30px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #000; 
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+
+.send-button-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.send-button {
+  position: relative; 
+  width: 200px;
+  padding: 7px;
+  background-color: rgb(255, 119, 0);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  overflow: hidden; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-text {
+  transition: transform 0.3s ease;
+}
+
+.send-image {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px; 
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
+.send-button:hover .send-text {
+  transform: translateX(-10px);
+}
+
+.send-button:hover .send-image {
+  opacity: 1; 
+} */
+
+
+
