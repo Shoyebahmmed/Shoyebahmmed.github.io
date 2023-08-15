@@ -10,661 +10,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
-<style>
-  body {
-  font-family: Arial, sans-serif;
-  background-color: #000000;
-  color: #333;
-  font-size: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-.head {
-  height: 1000px;
-  position: relative;
-}
-
-.top_bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  color: white;
-  position: relative;
-  z-index: 2;
-}
-
-.title_name {
-  padding-left: 40px;
-  font-family: "Optima", sans-serif;
-  font-weight: bolder;
-  font-size: 50px;
-}
-
-.title_name a {
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.first_name {
-  color: #fff;
-}
-
-.last_name {
-  color: rgb(255, 91, 3);
-}
-
-.nav ul {
-  font-family: Courier, monospace;
-  list-style: none;
-  display: flex;
-  gap: 70px;
-  margin: 0;
-}
-
-.nav li {
-  border-bottom: none;
-}
-
-.nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav a::after {
-  content: '';
-  display: block;
-  height: 4px;
-  width: 100px;
-  background-color: rgb(255, 91, 3);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.nav a:hover::after {
-  transform: scaleX(1);
-}
-
-.profile_pic {
-  position: absolute;
-  top: 0;
-  right: 250px;
-  height: 100%;
-  width: auto;
-  object-fit: cover;
-  filter: drop-shadow(-60px -70px 250px rgb(80, 80, 80));
-  z-index: 1;
-}
-
-.intro {
-  color: #fff;
-  font-size: 20px;
-  margin-top: 12%;
-  margin-left: 45px;
-  width: 40%;
-  font-family: "Optima", sans-serif;
-}
-
-.expertise {
-  font-size: 22px;
-  margin-bottom: 40px;
-}
-
-.wellcome {
-  margin-top: 20px;
-  font-size: 80px;
-}
-
-.name {
-  color: rgb(255, 91, 3);
-  font-weight: bolder;
-}
-
-.body {
-  height: fit-content;
-  background-color: #f0f0f0;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  position: relative;
-}
-
-.about-me {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.aboutTitle {
-  font-size: 35px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.about-pic {
-  flex: 1;
-  margin-top: 20px;
-  position: absolute;
-  top: 100px;
-}
-
-.about-pic img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.about-me-content {
-  flex: 1;
-  padding: 20px;
-  background-color: #f0f0f0;
-  margin-left: 320px;
-}
-
-.about-info p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #555;
-}
-
-.about-links {
-  display: flex;
-  margin-top: 20px;
-}
-
-.about-links a {
-  color: #555;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.about-links a:not(:last-child) {
-  margin-right: 70px;
-}
-
-.about-links a::after {
-  content: '';
-  display: block;
-  height: 4px;
-  width: 100px;
-  background-color: rgb(255, 91, 3);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.about-links a:hover::after,
-.about-links a.active::after {
-  transform: scaleX(1);
-}
-
-.about-links a:hover,
-.about-links a.active {
-  color: #333;
-}
-
-.education {
-  padding: 20px;
-  background-color: #f0f0f0;
-}
-
-.education-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.education-item {
-  margin-bottom: 20px;
-}
-
-.education-item h3 {
-  font-size: 20px;
-  font-weight: bold;
-  color: #555;
-  margin-bottom: 8px;
-}
-
-.education-item p {
-  font-size: 16px;
-  color: #777;
-  margin-bottom: 4px;
-}
-
-.projects {
-  margin-top: 50px;
-}
-
-.project-item {
-  margin-bottom: 30px;
-}
-
-.project-item h3 {
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.project-item p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-.skills-item {
-  margin-bottom: 20px;
-}
-
-.skill-bar {
-  width: 100%;
-  height: 10px;
-  background-color: #d3d3d3;
-  position: relative;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.skill-progress {
-  height: 100%;
-  background-color: rgb(255, 91, 3);
-  width: 0;
-  position: absolute;
-  border-radius: 5px;
-  animation: fillAnimation 2s ease forwards;
-}
-
-.skill-left {
-  height: 100%;
-  background-color: #d3d3d3;
-  position: absolute;
-  border-radius: 5px;
-}
-
-.skills-item p {
-  margin: 5px 0;
-}
-
-@keyframes fillAnimation {
-  to {
-    width: var(--skill-width, 100%);
-  }
-}
-
-.contact-section {
-  background-color: rgb(255, 91, 3);
-  text-align: center;
-  padding: 40px 0;
-  padding-bottom: 100px;
-}
-
-.contact-social {
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-right: 30px;
-}
-
-.contact-social a {
-  display: inline-block;
-  margin: 5px;
-}
-
-.contact-social img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-}
-
-.cont_title {
-  font-size: 35px;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 40px;
-}
-
-.contact-form {
-  flex: 1;
-  max-width: 400px;
-  margin-left: 100px;
-}
-
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 100px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-color: #000000;
-  white-space: nowrap;
-}
-
-.pro_title {
-  font-family: 'Courier New', monospace;
-  font-size: 40px;
-  font-weight: 900;
-  color: #fff;
-  text-align: center;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.box {
-  flex: 0 0 290px;
-  position: relative;
-  height: 400px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  box-shadow: rgba(255, 255, 255, 0.4) 0px 30px 90px;
-  transition: transform 0.3s;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.box:hover {
-  transform: scale(1.1);
-}
-
-.image {
-  width: 90%;
-  height: 80%;
-  overflow: hidden;
-  border-radius: 8px 8px 0 0;
-}
-
-.image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hover_content {
-  max-width: 90%;
-}
-
-.hover_box {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 10%;
-  background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(5px);
-  border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  transition: opacity 0.3s, transform 0.3s, bottom 0.3s, height 0.3s;
-  overflow: hidden;
-}
-
-.box:not(:hover) .hover_box .title {
-  opacity: 1;
-}
-
-.box:hover .hover_box {
-  height: 60%;
-}
-
-.hover_box .title {
-  max-width: 90%;
-  margin-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 3px;
-  overflow: hidden;
-  opacity: 0;
-  font-size: 18px;
-  font-weight: bold;
-  transition: opacity 0.3s 0.3s;
-  word-break: break-all;
-}
-
-.box:hover .hover_box .title {
-  opacity: 1;
-}
-
-.hover_box .description {
-  max-width: 90%;
-  margin: 10px;
-  overflow: hidden;
-  opacity: 0;
-  font-size: 14px;
-  transition: opacity 0.3s 0.3s;
-  word-wrap: break-word;
-  white-space: normal;
-}
-
-.hover_box .sectors {
-  max-width: 100%;
-  margin: 10px;
-  max-height: 100px;
-  overflow: hidden;
-  opacity: 0;
-  font-size: 14px;
-  transition: opacity 0.3s 0.3s;
-  word-wrap: break-word;
-  white-space: normal;
-}
-
-.box:hover .hover_box .description {
-  opacity: 1;
-}
-
-.box:hover .hover_box .sectors {
-  opacity: 1;
-}
-
-.read-more {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 5px 10px;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #333;
-  border-radius: 8px;
-  cursor: pointer;
-  display: none;
-}
-
-.box:hover .hover_box .read-more {
-  display: block;
-}
-
-.overflow-screen {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 8px 8px 0 0;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  overflow-y: auto;
-}
-
-.container {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.project-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.overflow-screen .content .description {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.feature-list {
-  font-size: 16px;
-}
-
-.feature-list li {
-  margin-bottom: 10px;
-}
-
-.awards {
-  font-size: 16px;
-  font-style: italic;
-  margin-bottom: 20px;
-}
-
-.results {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.overflow-screen.active {
-  display: block;
-  animation: slideUp 0.3s ease-out forwards;
-}
-
-.overflow-screen.closing {
-  animation: slideDown 0.3s ease-out forwards;
-}
-
-@keyframes slideUp {
-  from {
-    height: 0;
-    opacity: 0;
-  }
-  to {
-    height: 80%;
-    opacity: 1;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    height: 80%;
-    opacity: 1;
-  }
-  to {
-    height: 0;
-    opacity: 0;
-  }
-}
-
-.close-button {
-  position: absolute;
-  top: 15px;
-  right: 50px;
-  cursor: pointer;
-}
-
-.hype_git_button {
-  width: fit-content;
-  background-color: white;
-  color: black;
-  border: 2px solid #555555;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: black;
-  border-radius: 30px;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.hype_git_button img {
-  width: 30px;
-  margin-right: 10px;
-}
-
-.hype_git_button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.hype_git_button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.hype_git_button:hover span {
-  padding-right: 25px;
-}
-
-.hype_git_button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-.hype_git_button_main {
-  width: fit-content;
-  background-color: white;
-  color: black;
-  border: 2px solid #555555;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: black;
-  border-radius: 30px;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  box-shadow: rgba(255, 255, 255, 0.4) 0px 30px 90px;
-}
-
-.hype_git_button_main img {
-  width: 30px;
-  margin-right: 10px;
-}
-
-.hype_git_button_main span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.hype_git_button_main span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.hype_git_button_main:hover span {
-  padding-right: 25px;
-}
-
-.hype_git_button_main:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-</style>
 
 <body>
 
+  <div id="loading-container">
+    <div id="loading-content">
+    <iframe id="loading-frame" src="Loading_Page.html" frameborder="0" style="height: 100vh; width: 100%; position: fixed; top: 0; left: 0;"></iframe>
+  </div> 
+  </div>
+  <div class="main-content" id="main-content">
     <div class="head" id="home">
         <div class="top_bar">
             <div class="title_name">
@@ -682,9 +36,10 @@
             </div>
           </div>
 
-          <img class="profile_pic" src="shoyeb_removeBG_2.png" alt="Shoyeb Ahmmed">
+          <div class="animation-container">
+          <img class="profile_pic_hidden" id="prof_img" src="shoyeb_removeBG_2.png" alt="Shoyeb Ahmmed">
 
-          <div class="intro">
+          <div class="intro_hidden" id="intro">
             <span class="expertise">
                 Software Developer
             </span>
@@ -698,6 +53,7 @@
             Join me as we push the boundaries of imagination and craft extraordinary digital solutions together.
             
           </div>
+        </div>
     </div>
 
 
@@ -996,7 +352,6 @@
         <div class="close-button" onclick="closeOverflow()">Close</div>
       </div>
     </div>
-      </div>
 
 
 
@@ -1024,9 +379,87 @@
         <p style="font-size: 14px; margin-top: 20px;">I'm looking forward to hearing from you!</p>
     </div>
 
+    </div>
 </body>
 
 <script>
+
+// document.addEventListener("scroll", function() {
+//   const section = document.getElementById("prof_img");
+//   const sectionPosition = section.getBoundingClientRect();
+
+//   // Check if the section is partially visible
+//   if (sectionPosition.top < window.innerHeight) {
+//     section.classList.add("profile_pic_visible");
+//   }
+// });
+
+
+document.getElementById("main-content").style.display = "none";
+const loadingFrame = document.getElementById("loading-frame");
+const loadingContainer = document.getElementById("loading-container");
+const mainContent = document.getElementById("main-content");
+const prof_img = document.getElementById("prof_img");
+const intro = document.getElementById("intro");
+
+loadingFrame.addEventListener("load", function() {
+  // Hide the loading screen after a delay
+  setTimeout(function() {
+    fadeOut(loadingContainer, 500); // Fade out loading screen over 0.5 seconds
+    setTimeout(function() {
+      mainContent.style.display = "block";
+      fadeIn(mainContent, 1000); // Fade in main content over 1 second
+
+      // Trigger the animation for the section
+
+      
+      setTimeout(function() {
+        loadingContainer.style.display = "none";
+        prof_img.classList.add("profile_pic_visible");
+        intro.classList.add("intro_visible");
+      }, 1000); // Hide loading container after fade-in animation
+    }, 500); // Show main content after 0.5 second of fading out loading screen
+  }, 3000); // Show loading screen for 1 second
+});
+
+// Function to fade in an element over a specified duration
+function fadeIn(element, duration) {
+  let opacity = 0;
+  const interval = 50; // Interval for opacity change
+
+  element.style.opacity = opacity;
+  element.style.display = "block";
+
+  const fadeInInterval = setInterval(function() {
+    opacity += interval / duration;
+    element.style.opacity = opacity;
+
+    if (opacity >= 1) {
+      clearInterval(fadeInInterval);
+    }
+  }, interval);
+}
+
+// Function to fade out an element over a specified duration
+function fadeOut(element, duration) {
+  let opacity = 1;
+  const interval = 50; // Interval for opacity change
+
+  const fadeOutInterval = setInterval(function() {
+    opacity -= interval / duration;
+    element.style.opacity = opacity;
+
+    if (opacity <= 0) {
+      clearInterval(fadeOutInterval);
+      element.style.display = "none";
+    }
+  }, interval);
+}
+
+
+
+
+
 function reloadPage() {
     location.reload();
   }
@@ -1058,30 +491,48 @@ function showEducation(event) {
 
     const education = `
     <div class="education">
-        <ul class="education-list">
-        <li class="education-item">
-            <h3>University of Wollongong - Bachelor of Computer Science</h3>
-            <p>2022 – 2023</p>
-            <p>Completed all subjects and awaiting results. Expected completion of Master's degree in 2025.</p>
-        </li>
-        <li class="education-item">
-            <h3>University of Wollongong in Dubai - Bachelor of Computer Science</h3>
-            <p>2019 – 2021</p>
-            <p>Finished my 3rd year and transferred to the University of Wollongong, Australia.</p>
-        </li>
-        <li class="education-item">
-            <h3>Dr. Mahbubur Rahman Mollah College - Higher Secondary Certificate</h3>
-            <p>2015 – 2017</p>
-            <p>Completed my H.S.C. in Science from Bangladesh with a GPA of 4.5.</p>
-        </li>
-        <!-- Add more education entries if needed -->
-        </ul>
+  <h2 class="section-title">Education</h2>
+  <div class="education-list">
+    <div class="education-item">
+      <div class="education-content">
+        <h3 class="university-name">University of Wollongong</h3>
+        <p class="date">2022 – 2023</p>
+        <p class="degree">Bachelor of Computer Science</p>
+        <p class="description">
+          Completed all subjects and awaiting results. Expected completion of Master's degree in 2025.
+        </p>
+      </div>
     </div>
+    <div class="education-item">
+      <div class="education-content">
+        <h3 class="university-name">University of Wollongong in Dubai</h3>
+        <p class="date">2019 – 2021</p>
+        <p class="degree">Bachelor of Computer Science</p>
+        <p class="description">
+          Finished my 3rd year and transferred to the University of Wollongong, Australia.
+        </p>
+      </div>
+    </div>
+    <div class="education-item">
+      <div class="education-content">
+        <h3 class="university-name">Dr. Mahbubur Rahman Mollah College</h3>
+        <p class="date">2015 – 2017</p>
+        <p class="degree">Higher Secondary Certificate</p>
+        <p class="description">
+          Completed my H.S.C. in Science from Bangladesh with a GPA of 4.5.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
     `;
 
   event.preventDefault();
   document.querySelector('.about-pic img').src = 'education.jpg';
-  document.querySelector('.details p').innerHTML = education;
+  const detailsElement = document.querySelector('.details p');
+  detailsElement.innerHTML = education;
+  detailsElement.classList.add('fadeInContent');
   document.getElementById('education-link').classList.add('active');
     document.getElementById('projects-link').classList.remove('active');
     document.getElementById('skills-link').classList.remove('active');
@@ -1090,6 +541,7 @@ function showEducation(event) {
 
 function showSkills(event) {
     const programmingSkills = `
+<div class="skill_cont">    
 <div class="skills-item">
     <h3>Programming Languages</h3>
     <p>Java - 80%</p>
@@ -1113,9 +565,7 @@ function showSkills(event) {
         <div class="skill-left"></div>
     </div>
 </div>
-`;
 
-const webDevelopmentSkills = `
 <div class="skills-item">
     <h3>Web Development</h3>
     <p>HTML - 90%</p>
@@ -1154,9 +604,7 @@ const webDevelopmentSkills = `
         <div class="skill-left"></div>
     </div>
 </div>
-`;
 
-const databaseSkills = `
 <div class="skills-item">
     <h3>Database Management</h3>
     <p>MySQL - 85%</p>
@@ -1180,10 +628,7 @@ const databaseSkills = `
         <div class="skill-left"></div>
     </div>
 </div>
-`;
 
-
-const otherSkills = `
 <div class="skills-item">
     <h3>Other Skills</h3>
     <p>UI/UX Design - 75%</p>
@@ -1207,11 +652,12 @@ const otherSkills = `
         <div class="skill-left"></div>
     </div>
 </div>
+</div>
 `;
 
   event.preventDefault();
   document.querySelector('.about-pic img').src = 'skills.jpg';
-  document.querySelector('.details p').innerHTML = programmingSkills + webDevelopmentSkills + databaseSkills + otherSkills;
+  document.querySelector('.details p').innerHTML = programmingSkills;
   document.getElementById('education-link').classList.remove('active');
     document.getElementById('projects-link').classList.remove('active');
     document.getElementById('skills-link').classList.add('active');

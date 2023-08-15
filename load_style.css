@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000000af;
+    overflow: hidden;
+    perspective: 1000px;
+    perspective-origin: center;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .loading-text {
+    font-size: 24px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .loading-text .gap {
+    width: 20px; /* Adjust this value for the desired gap */
+  }
+
+  .loading-cube {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spin 3s linear infinite;
+  }
+
+  .loading-face {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loading-face:nth-child(1) {
+    transform: translateZ(20px);
+  }
+
+  .loading-face:nth-child(2) {
+    transform: rotateY(90deg) translateZ(20px);
+  }
+
+  .loading-face:nth-child(3) {
+    transform: rotateY(180deg) translateZ(20px);
+  }
+
+  .loading-face:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(20px);
+  }
+
+  .loading-face:nth-child(5) {
+    transform: rotateX(90deg) translateZ(20px);
+  }
+
+  .loading-face:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(20px);
+  }
+
+  .dot-typing {
+    position: relative;
+    left: -9999px;
+    top: 6px;
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #fff;
+    box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+    animation: dot-typing 1.5s infinite linear;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotateX(0) rotateY(0);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+  }
+
+  @keyframes dot-typing {
+    0% {
+      box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+    }
+    16.667% {
+      box-shadow: 9984px -10px 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+    }
+    33.333% {
+      box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+    }
+    50% {
+      box-shadow: 9984px 0 0 0 #fff, 9999px -10px 0 0 #fff, 10014px 0 0 0 #fff;
+    }
+    66.667% {
+      box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+    }
+    83.333% {
+      box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px -10px 0 0 #fff;
+    }
+    100% {
+      box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
+    }
+  }
