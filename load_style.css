@@ -1,120 +1,180 @@
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #000000af;
-    overflow: hidden;
-    perspective: 1000px;
-    perspective-origin: center;
-    color: white;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #08080b;
+  overflow: hidden;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.loading-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+}
+
+.loader-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 91, 3, 0.35), transparent 70%);
+  filter: blur(30px);
+  transform: translate(-50%, -60%);
+  animation: glow-pulse 3s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes glow-pulse {
+
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: translate(-50%, -60%) scale(1);
   }
 
-  .loading-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -60%) scale(1.15);
+  }
+}
+
+/* Liquid wave loader: two rotating "blob" shapes clipped inside a circle,
+   rising and falling like a filling tank of water. Pure CSS, no canvas or
+   library needed, so it paints instantly on first load. */
+.wave-loader {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 20px 60px rgba(255, 91, 3, 0.25);
+}
+
+.wave-loader-liquid {
+  position: absolute;
+  left: -25%;
+  width: 150%;
+  aspect-ratio: 1;
+  border-radius: 42%;
+  top: 60%;
+}
+
+.wave-a {
+  background: linear-gradient(135deg, #ff5b03, #ffb703);
+  animation: wave-spin 6s linear infinite, wave-level 2.6s ease-in-out infinite alternate;
+}
+
+.wave-b {
+  background: rgba(255, 255, 255, 0.22);
+  opacity: 0.7;
+  animation: wave-spin-reverse 8s linear infinite, wave-level 2.6s ease-in-out infinite alternate;
+}
+
+@keyframes wave-spin {
+  from {
+    transform: rotate(0deg);
   }
 
-  .loading-text {
-    font-size: 24px;
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wave-spin-reverse {
+  from {
+    transform: rotate(360deg);
   }
 
-  .loading-text .gap {
-    width: 20px; /* Adjust this value for the desired gap */
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes wave-level {
+  from {
+    top: 66%;
   }
 
-  .loading-cube {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    transform-style: preserve-3d;
-    animation: spin 3s linear infinite;
+  to {
+    top: 40%;
+  }
+}
+
+.wave-loader-mark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.loading-text {
+  position: relative;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #f5f5f7;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 1;
+}
+
+.dot-typing {
+  position: relative;
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #ff8a3d;
+  color: #ff8a3d;
+  box-shadow: 12px 0 0 0 #ff8a3d, 24px 0 0 0 #ff8a3d;
+  animation: dot-typing 1.5s infinite linear;
+}
+
+@keyframes dot-typing {
+  0% {
+    box-shadow: 12px 0 0 0 #ff8a3d, 24px 0 0 0 #ff8a3d;
   }
 
-  .loading-face {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  16.667% {
+    box-shadow: 12px -8px 0 0 #ff8a3d, 24px 0 0 0 #ff8a3d;
   }
 
-  .loading-face:nth-child(1) {
-    transform: translateZ(20px);
+  33.333% {
+    box-shadow: 12px 0 0 0 #ff8a3d, 24px 0 0 0 #ff8a3d;
   }
 
-  .loading-face:nth-child(2) {
-    transform: rotateY(90deg) translateZ(20px);
+  50% {
+    box-shadow: 12px 0 0 0 #ff8a3d, 24px -8px 0 0 #ff8a3d;
   }
 
-  .loading-face:nth-child(3) {
-    transform: rotateY(180deg) translateZ(20px);
+  66.667% {
+    box-shadow: 12px 0 0 0 #ff8a3d, 24px 0 0 0 #ff8a3d;
   }
 
-  .loading-face:nth-child(4) {
-    transform: rotateY(-90deg) translateZ(20px);
+  83.333% {
+    box-shadow: 12px 0 0 0 #ff8a3d, 24px 0 0 0 #ff8a3d;
   }
 
-  .loading-face:nth-child(5) {
-    transform: rotateX(90deg) translateZ(20px);
+  100% {
+    box-shadow: 12px 0 0 0 #ff8a3d, 24px 0 0 0 #ff8a3d;
   }
-
-  .loading-face:nth-child(6) {
-    transform: rotateX(-90deg) translateZ(20px);
-  }
-
-  .dot-typing {
-    position: relative;
-    left: -9999px;
-    top: 6px;
-    width: 5px;
-    height: 5px;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #fff;
-    box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
-    animation: dot-typing 1.5s infinite linear;
-  }
-
-  @keyframes spin {
-    0% {
-      transform: rotateX(0) rotateY(0);
-    }
-    100% {
-      transform: rotateX(360deg) rotateY(360deg);
-    }
-  }
-
-  @keyframes dot-typing {
-    0% {
-      box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
-    }
-    16.667% {
-      box-shadow: 9984px -10px 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
-    }
-    33.333% {
-      box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
-    }
-    50% {
-      box-shadow: 9984px 0 0 0 #fff, 9999px -10px 0 0 #fff, 10014px 0 0 0 #fff;
-    }
-    66.667% {
-      box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
-    }
-    83.333% {
-      box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px -10px 0 0 #fff;
-    }
-    100% {
-      box-shadow: 9984px 0 0 0 #fff, 9999px 0 0 0 #fff, 10014px 0 0 0 #fff;
-    }
-  }
+}

@@ -2,12 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoyeb Ahmmed</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shoyeb Ahmmed — Software Developer specializing in full-stack, mobile and Python development. Explore my projects, professional experience and skills.">
+  <title>Shoyeb Ahmmed | Software Developer</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b0b10'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Arial,sans-serif' font-weight='700' fill='%23ff5b03' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 
@@ -15,156 +19,547 @@
 
   <div id="loading-container">
     <div id="loading-content">
-    <iframe id="loading-frame" src="Loading_Page.html" frameborder="0" style="height: 100vh; width: 100%; position: fixed; top: 0; left: 0;"></iframe>
-  </div> 
+      <iframe id="loading-frame" src="Loading_Page.html" frameborder="0" style="height: 100vh; width: 100%; position: fixed; top: 0; left: 0;"></iframe>
+    </div>
   </div>
   <div class="main-content" id="main-content">
+
+    <header class="site-nav" id="siteNav">
+      <div class="nav-inner">
+        <div class="title_name">
+          <a href="#" onclick="reloadPage()">
+            <span class="first_name">Sho</span><span class="last_name">yeb</span>
+          </a>
+        </div>
+
+        <nav class="nav" id="navLinks">
+          <ul>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="nav-scrim" id="navScrim"></div>
+
     <div class="head" id="home">
-        <div class="top_bar">
-            <div class="title_name">
-                <a href="#" onclick="reloadPage()">
-                  <span class="first_name">Sho</span><span class="last_name">yeb</span>
-                </a>
-              </div>
-              
-            <div class="nav">
-              <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
+      <div class="hero-glow hero-glow-1" id="glow1"></div>
+      <div class="hero-glow hero-glow-2" id="glow2"></div>
+
+      <div class="animation-container">
+        <div class="intro_hidden" id="intro">
+          <span class="expertise">
+            <span class="pulse-dot"></span> Software Developer
+          </span>
+
+          <h1 class="wellcome">
+            Hi, I'm <span class="name">Shoyeb Ahmmed</span>
+          </h1>
+
+          <p class="hero-text">
+            A creative problem solver, tech explorer, and a proud Computer Science graduate.
+            Join me as we push the boundaries of imagination and craft extraordinary digital solutions together.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary magnetic">View My Work</a>
+            <a href="#contact" class="btn btn-ghost magnetic">Get In Touch</a>
           </div>
 
-          <div class="animation-container">
-          <img class="profile_pic_hidden" id="prof_img" src="shoyeb_removeBG_2.png" alt="Shoyeb Ahmmed">
-
-          <div class="intro_hidden" id="intro">
-            <span class="expertise">
-                Software Developer
-            </span>
-            <br><br>
-            <span class="wellcome">
-                Hi, I'm <span class="name">Shoyeb Ahmmed</span>
-            </span>
-            <br>
-            a creative problem solver, 
-            tech explorer, and a proud Computer Science graduate. 
-            Join me as we push the boundaries of imagination and craft extraordinary digital solutions together.
-            
+          <div class="hero-socials">
+            <a href="https://github.com/Shoyebahmmed" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="github.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/shoyebahmmed/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="linkedin.png" alt=""></a>
+            <a href="mailto:ahmmad.ef22@gmail.com" aria-label="Email"><img src="email.png" alt=""></a>
           </div>
         </div>
+
+        <div class="hero-image-wrap" id="heroImageWrap">
+          <div class="hero-photo-panel tilt">
+            <canvas id="hero3d" class="hero-3d-canvas" aria-hidden="true"></canvas>
+            <img class="profile_pic_hidden" id="prof_img" src="me1.png" alt="Shoyeb Ahmmed">
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span class="material-symbols-outlined">keyboard_arrow_down</span>
+      </a>
     </div>
 
 
 
-    <div class="body">
-        <h2 class="aboutTitle">About Me</h2>
-        <div class="about-me">
-            <div class="about-pic">
-                <img src="about.jpg" alt="Profile Picture">
-              </div>
-            <div class="about-me-content">
-              
-              <div class="about-info">
-                <p>
-                    Hello, I'm Shoyeb Ahmmed, a creative problem solver and tech enthusiast. 
-                    Armed with a Bachelor's degree in Computer Science, my passion lies in web 
-                    and mobile application development, where I love pushing the boundaries of 
-                    imagination to craft extraordinary digital solutions. From Java, C, C++ to 
-                    CSS, HTML, and JavaScript, I thrive in utilizing various programming languages 
-                    and frameworks. Throughout my academic journey, I've tackled challenging 
-                    projects, such as designing and developing a Kid Nursery Management 
-                    Application and an Asthma Management Application, both of which received 
-                    widespread acclaim. As a recent graduate, I am eager to join a dynamic team, 
-                    collaborate with experienced professionals, and contribute my expertise in 
-                    UI/UX design and backend development. Let's embark on this exciting journey 
-                    together and create innovative solutions that leave a positive impact on the 
-                    world.
-                </p>
-            </div>  
-            <div class="about-links" id="about">
-                <a href="#" onclick="showEducation(event)" id="education-link">Education</a>
-                <a href="#" onclick="showSkills(event)" id="skills-link">Skills</a>
-            </div>
-            
-        <div class="details"><p></p></div>
-    </div>
+    <div class="about-section" id="about">
+      <p class="eyebrow reveal">Get To Know Me</p>
+      <h2 class="section-title reveal">About Me</h2>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>
+            Hello, I'm Shoyeb Ahmmed, a creative problem solver and tech enthusiast.
+            Armed with a Bachelor's degree in Computer Science and soon a Master's in Information
+            Technology, my passion lies in web and mobile application development, where I love
+            pushing the boundaries of imagination to craft extraordinary digital solutions. From
+            Java, C, C++ to Python, TypeScript, HTML, CSS, and JavaScript, I thrive in utilizing
+            various programming languages and frameworks.
+          </p>
+          <p>
+            Beyond academic projects like a Kid Nursery Management Application and an
+            award-winning Asthma Management App, I've since taken on real-world professional and
+            personal challenges — from building analytics tooling during a placement at
+            SmartPropGuide, to designing multi-tenant SaaS platforms from the ground up. I'm eager
+            to keep collaborating with driven teams and contribute my expertise in full-stack
+            development, mobile engineering, and UI/UX design.
+          </p>
+          <p class="about-current">
+            <span class="material-symbols-outlined">bolt</span>
+            Currently finishing my Master of IT (Big Data &amp; Analytics) at ICMS Sydney.
+          </p>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-card tilt reveal">
+            <span class="material-symbols-outlined stat-icon">school</span>
+            <span class="stat-value">2</span>
+            <span class="stat-label">Degrees — Bachelor's &amp; Master's</span>
+          </div>
+          <div class="stat-card tilt reveal">
+            <span class="material-symbols-outlined stat-icon">work</span>
+            <span class="stat-value">1</span>
+            <span class="stat-label">Industry Placement</span>
+          </div>
+          <div class="stat-card tilt reveal">
+            <span class="material-symbols-outlined stat-icon">deployed_code</span>
+            <span class="stat-value">7</span>
+            <span class="stat-label">Projects Shipped</span>
+          </div>
+          <div class="stat-card tilt reveal">
+            <span class="material-symbols-outlined stat-icon">code</span>
+            <span class="stat-value">10+</span>
+            <span class="stat-label">Languages &amp; Frameworks</span>
+          </div>
+        </div>
       </div>
     </div>
 
 
-    <div class="projects">
-      <div class="pro_title">My Projects</div>
-      <a href="https://github.com/Shoyebahmmed" target="_blank" class="hype_git_button_main">
-        <img src="github.png" alt="Hover Image"> 
+    <div class="education-section" id="education">
+      <div class="education-inner">
+        <div class="education-photo reveal">
+          <div class="education-photo-glow"></div>
+          <img class="education-photo-img tilt" src="me2.png" alt="Shoyeb Ahmmed at graduation">
+        </div>
+
+        <div class="education-content">
+          <p class="eyebrow left reveal">Academic Foundation</p>
+          <h2 class="section-title left reveal">Education</h2>
+
+          <div class="timeline education-timeline">
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card tilt">
+                <div class="timeline-head">
+                  <div>
+                    <h3 class="timeline-role">Master of Information Technology <span class="timeline-sub">(Big Data and Analytics)</span></h3>
+                    <p class="timeline-company">International College of Management, Sydney (ICMS)</p>
+                  </div>
+                  <span class="timeline-date">In Progress</span>
+                </div>
+                <p class="timeline-desc">
+                  Final trimester complete — awaiting official graduation and convocation.
+                </p>
+                <ul class="timeline-highlights">
+                  <li>Advanced big data architecture, data modeling, and database management systems</li>
+                  <li>End-to-end data analytics pipelines, predictive modeling, and business intelligence solutions</li>
+                  <li>Persuasive data visualization and data storytelling to drive strategic decision-making</li>
+                  <li>Agile IT project management, systems analysis, and information systems theory applied to real-world business</li>
+                </ul>
+                <p class="timeline-desc">
+                  Combined theoretical coursework with practical industry application, including a hands-on
+                  Work-Integrated Learning (WIL) developer placement and software engineering projects.
+                </p>
+                <div class="timeline-tags">
+                  <span class="chip">Big Data</span>
+                  <span class="chip">Predictive Modeling</span>
+                  <span class="chip">Business Intelligence</span>
+                  <span class="chip">Data Storytelling</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card tilt">
+                <div class="timeline-head">
+                  <div>
+                    <h3 class="timeline-role">Bachelor of Computer Science</h3>
+                    <p class="timeline-company">University of Wollongong</p>
+                  </div>
+                  <span class="timeline-date">2022 – 2023</span>
+                </div>
+                <p class="timeline-desc">
+                  Completed all subjects; final-year capstone included the award-winning Breath asthma
+                  management app.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card tilt">
+                <div class="timeline-head">
+                  <div>
+                    <h3 class="timeline-role">Bachelor of Computer Science</h3>
+                    <p class="timeline-company">University of Wollongong in Dubai</p>
+                  </div>
+                  <span class="timeline-date">2019 – 2021</span>
+                </div>
+                <p class="timeline-desc">
+                  Completed the first three years before transferring to the University of Wollongong,
+                  Australia.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card tilt">
+                <div class="timeline-head">
+                  <div>
+                    <h3 class="timeline-role">Higher Secondary Certificate</h3>
+                    <p class="timeline-company">Dr. Mahbubur Rahman Mollah College, Bangladesh</p>
+                  </div>
+                  <span class="timeline-date">2015 – 2017</span>
+                </div>
+                <p class="timeline-desc">Completed H.S.C. in Science with a GPA of 4.5.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="experience-section" id="experience">
+      <p class="eyebrow reveal">Career Journey</p>
+      <h2 class="section-title reveal">Experience</h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card tilt">
+            <div class="timeline-head">
+              <div>
+                <h3 class="timeline-role">Developer</h3>
+                <p class="timeline-company">SmartPropGuide Pty Ltd</p>
+              </div>
+              <span class="timeline-date">Recent Placement</span>
+            </div>
+            <p class="timeline-desc">
+              Joined SmartPropGuide as part of a professional work placement, building tooling for
+              real estate and property operations. Used Python to streamline property information,
+              data analytics, and reporting capabilities — bridging day-to-day operational workflows
+              with information systems theory to analyze property metrics effectively.
+            </p>
+            <ul class="timeline-highlights">
+              <li>Developed Python-based reporting and analytics tooling for property data</li>
+              <li>Applied information systems theory to real-world business operations</li>
+              <li>Collaborated on streamlining data-driven decision-making for property teams</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="chip">Python</span>
+              <span class="chip">Data Analytics</span>
+              <span class="chip">Reporting Systems</span>
+              <span class="chip">Information Systems</span>
+            </div>
+            <a href="https://github.com/Shoyebahmmed/SmartPropGuid_Report_Gen_Gemini" target="_blank" class="hype_git_button">
+              <img src="github.png" alt="Hover Image">
+              <span>See the Code</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="skills-section" id="skills">
+      <p class="eyebrow reveal">Toolbox</p>
+      <h2 class="section-title reveal">Skills &amp; Tools</h2>
+      <p class="skills-sub reveal">
+        The languages, frameworks, and tools I reach for most — across full-stack web, mobile, and
+        data-driven backends.
+      </p>
+
+      <div class="marquee-row reveal">
+        <div class="marquee-fade marquee-fade-left"></div>
+        <div class="marquee-fade marquee-fade-right"></div>
+        <div class="marquee-track" id="marqueeTrack1"></div>
+      </div>
+      <div class="marquee-row reverse reveal">
+        <div class="marquee-fade marquee-fade-left"></div>
+        <div class="marquee-fade marquee-fade-right"></div>
+        <div class="marquee-track" id="marqueeTrack2"></div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category tilt reveal">
+          <h3><span class="material-symbols-outlined">terminal</span> Languages</h3>
+          <div class="skill-pills">
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/python" alt="" loading="lazy">Python</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/openjdk" alt="" loading="lazy">Java</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/typescript" alt="" loading="lazy">TypeScript</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/javascript" alt="" loading="lazy">JavaScript</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/cplusplus" alt="" loading="lazy">C++</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/c" alt="" loading="lazy">C</span>
+          </div>
+        </div>
+
+        <div class="skill-category tilt reveal">
+          <h3><span class="material-symbols-outlined">devices</span> Web &amp; Mobile</h3>
+          <div class="skill-pills">
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/html5" alt="" loading="lazy">HTML5</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/css" alt="" loading="lazy">CSS3</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/react" alt="" loading="lazy">React &amp; React Native</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/nodedotjs" alt="" loading="lazy">Node.js</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/nestjs" alt="" loading="lazy">NestJS</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/php" alt="" loading="lazy">PHP</span>
+          </div>
+        </div>
+
+        <div class="skill-category tilt reveal">
+          <h3><span class="material-symbols-outlined">database</span> Data &amp; Backend</h3>
+          <div class="skill-pills">
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/mysql" alt="" loading="lazy">MySQL</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/postgresql" alt="" loading="lazy">PostgreSQL</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/mongodb" alt="" loading="lazy">MongoDB</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/firebase" alt="" loading="lazy">Firebase</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/sqlite" alt="" loading="lazy">SQLite</span>
+          </div>
+        </div>
+
+        <div class="skill-category tilt reveal">
+          <h3><span class="material-symbols-outlined">build</span> Tools &amp; Platforms</h3>
+          <div class="skill-pills">
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/git" alt="" loading="lazy">Git</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/github" alt="" loading="lazy">GitHub</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/figma" alt="" loading="lazy">Figma</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/androidstudio" alt="" loading="lazy">Android Studio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="projects" id="projects">
+      <p class="eyebrow reveal light">What I've Built</p>
+      <div class="pro_title reveal">My Projects</div>
+      <a href="https://github.com/Shoyebahmmed" target="_blank" class="hype_git_button_main reveal">
+        <img src="github.png" alt="Hover Image">
         <span>Check My GitHub</span>
       </a>
 
-      <!-- Project 1 -->
-      <div class="box">
-        <div class="image">
-          <img src="breath_logo.png" alt="breath">
-        </div>
-        <div class="hover_content">
-          <div class="hover_box">
-            <p class="title">Breath: An Asthma Management App</p>
-            <p class="description">A comprehensive asthma management app with health education, patient diary, and monitoring features for personalized self-care.</p>
-            <p class="sectors"><b>Tools and Technologies:</b><br>React Native, Node.JS, Axios API</p>
-            <div class="read-more" onclick="showOverflow('project1')">See More...</div>
+      <div class="featured-projects">
+
+        <div class="feature-card tilt reveal">
+          <div class="feature-visual feature-visual-1">
+            <span class="material-symbols-outlined feature-icon">real_estate_agent</span>
+          </div>
+          <div class="feature-content">
+            <span class="feature-tag">Professional Experience</span>
+            <h3 class="feature-title">SmartPropGuide</h3>
+            <p class="feature-desc">
+              Developed as part of a professional placement at SmartPropGuide Pty Ltd. The platform
+              serves real estate and property operations, using Python to streamline property
+              information, data analytics, and reporting capabilities.
+            </p>
+            <div class="feature-tags">
+              <span class="chip">Python</span>
+              <span class="chip">Analytics</span>
+              <span class="chip">Reporting</span>
+            </div>
+            <div class="feature-actions">
+              <a href="https://github.com/Shoyebahmmed/SmartPropGuid_Report_Gen_Gemini" target="_blank" class="hype_git_button">
+                <img src="github.png" alt="Hover Image">
+                <span>See the Code</span>
+              </a>
+              <div class="read-more-link" onclick="showOverflow('project5')">Read More <span class="material-symbols-outlined">arrow_forward</span></div>
+            </div>
           </div>
         </div>
-      </div>
 
-
-      <!-- Project 2 -->
-      <div class="box">
-        <div class="image">
-          <img src="library.png" alt="library">
-        </div>
-        <div class="content">
-          <div class="hover_box">
-            <p class="title">Digital Library Management System</p>
-            <p class="description">Digital Library" website enabling Librarians to manage resources, and Borrowers to borrow, extend, and get notifications for due dates and costs.</p>
-            <p class="sectors"><b>Tools and Technologies:</b><br>HTML, CSS, PHP, MySQL</p>
-            <div class="read-more" onclick="showOverflow('project2')">See More...</div>
+        <div class="feature-card tilt reveal reverse">
+          <div class="feature-visual feature-visual-2">
+            <span class="material-symbols-outlined feature-icon">school</span>
+          </div>
+          <div class="feature-content">
+            <span class="feature-tag">Personal Project</span>
+            <h3 class="feature-title">EduSaaS</h3>
+            <p class="feature-desc">
+              A multi-tenant SaaS Educational Resource Planning (ERP) platform for schools, colleges,
+              and training institutes. Isolates institution data with database row-level security
+              while sharing a common backend schema across a modular monolith.
+            </p>
+            <div class="feature-tags">
+              <span class="chip">TypeScript</span>
+              <span class="chip">NestJS</span>
+              <span class="chip">React Native</span>
+              <span class="chip">PostgreSQL</span>
+            </div>
+            <div class="feature-actions">
+              <a href="https://github.com/Shoyebahmmed/EduSaaS_Educattor" target="_blank" class="hype_git_button">
+                <img src="github.png" alt="Hover Image">
+                <span>See the Code</span>
+              </a>
+              <div class="read-more-link" onclick="showOverflow('project6')">Read More <span class="material-symbols-outlined">arrow_forward</span></div>
+            </div>
           </div>
         </div>
-      </div>
 
-
-      <!-- Project 3 -->
-      <div class="box">
-        <div class="image">
-          <img src="kid_nursery.png" alt="kid_nursery">
-        </div>
-        <div class="content">
-          <div class="hover_box" >
-            <p class="title">Kid Nursery Management App</p>
-            <p class="description">Designed and built an efficient Kid Nursery Management System for daycare centers to streamline kid records, financial tracking, and activity management.</p>
-            <p class="sectors"><b>Tools and Technologies:</b><br>Java, sqlite, Android Studio</p>
-            <div class="read-more" onclick="showOverflow('project3')">See More...</div>
+        <div class="feature-card tilt reveal">
+          <div class="feature-visual feature-visual-3">
+            <span class="material-symbols-outlined feature-icon">restaurant</span>
+          </div>
+          <div class="feature-content">
+            <span class="feature-tag">Personal Project</span>
+            <h3 class="feature-title">Catalyst</h3>
+            <p class="feature-desc">
+              A dedicated Point-of-Sale and management SaaS application for restaurants and cafés —
+              digitizing the end-to-end dining workflow, from table order taking and kitchen ticket
+              routing to floor resource handling and dynamic menu configuration.
+            </p>
+            <div class="feature-tags">
+              <span class="chip">React Native</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">MySQL</span>
+            </div>
+            <div class="feature-actions">
+              <a href="https://github.com/Shoyebahmmed/Catalyst" target="_blank" class="hype_git_button">
+                <img src="github.png" alt="Hover Image">
+                <span>See the Code</span>
+              </a>
+              <div class="read-more-link" onclick="showOverflow('project7')">Read More <span class="material-symbols-outlined">arrow_forward</span></div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Project 3 -->
-      <div class="box">
-        <div class="image">
-          <img src="password.jpg" alt="password">
-        </div>
-        <div class="content">
-          <div class="hover_box" >
-            <p class="title">Safe & Secure Password</p>
-            <p class="description">Developed a Java-based password security system using Bloom filters, hashing functions, and similarity metrics to prevent weak and similar passwords, enhancing user security.</p>
-            <p class="sectors"><b>Tools and Technologies:</b><br>Java</p>
-            <div class="read-more" onclick="showOverflow('project4')">See More...</div>
+        <div class="feature-card tilt reveal reverse">
+          <div class="feature-visual feature-visual-4">
+            <span class="material-symbols-outlined feature-icon">monitor_heart</span>
+          </div>
+          <div class="feature-content">
+            <span class="feature-tag">Academic Project</span>
+            <h3 class="feature-title">Breath: Asthma Management App</h3>
+            <p class="feature-desc">
+              A comprehensive asthma management app with health education, a patient diary, and
+              monitoring features for personalized self-care — built as my final-year capstone and
+              awarded first prize in competition.
+            </p>
+            <div class="feature-tags">
+              <span class="chip">React Native</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">Axios API</span>
+            </div>
+            <div class="feature-actions">
+              <a href="https://github.com/Shoyebahmmed/Breath_APP_Front/tree/master" target="_blank" class="hype_git_button">
+                <img src="github.png" alt="Hover Image">
+                <span>See the Code</span>
+              </a>
+              <div class="read-more-link" onclick="showOverflow('project1')">Read More <span class="material-symbols-outlined">arrow_forward</span></div>
+            </div>
           </div>
         </div>
+
+        <div class="feature-card tilt reveal">
+          <div class="feature-visual feature-visual-5">
+            <span class="material-symbols-outlined feature-icon">local_library</span>
+          </div>
+          <div class="feature-content">
+            <span class="feature-tag">Academic Project</span>
+            <h3 class="feature-title">Digital Library Management System</h3>
+            <p class="feature-desc">
+              A web application enabling librarians to manage resources, and borrowers to explore,
+              borrow, extend, and get notifications for due dates and costs.
+            </p>
+            <div class="feature-tags">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">PHP</span>
+              <span class="chip">MySQL</span>
+            </div>
+            <div class="feature-actions">
+              <a href="https://github.com/Shoyebahmmed/Library-Management-Project/tree/master" target="_blank" class="hype_git_button">
+                <img src="github.png" alt="Hover Image">
+                <span>See the Code</span>
+              </a>
+              <div class="read-more-link" onclick="showOverflow('project2')">Read More <span class="material-symbols-outlined">arrow_forward</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-card tilt reveal reverse">
+          <div class="feature-visual feature-visual-6">
+            <span class="material-symbols-outlined feature-icon">child_care</span>
+          </div>
+          <div class="feature-content">
+            <span class="feature-tag">Academic Project</span>
+            <h3 class="feature-title">Kid Nursery Management App</h3>
+            <p class="feature-desc">
+              An efficient management system for daycare centers to streamline kid records,
+              financial tracking, and activity management.
+            </p>
+            <div class="feature-tags">
+              <span class="chip">Java</span>
+              <span class="chip">SQLite</span>
+              <span class="chip">Android Studio</span>
+            </div>
+            <div class="feature-actions">
+              <a href="https://github.com/Shoyebahmmed/Kid-Nursery-management-app-JAVA" target="_blank" class="hype_git_button">
+                <img src="github.png" alt="Hover Image">
+                <span>See the Code</span>
+              </a>
+              <div class="read-more-link" onclick="showOverflow('project3')">Read More <span class="material-symbols-outlined">arrow_forward</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-card tilt reveal">
+          <div class="feature-visual feature-visual-7">
+            <span class="material-symbols-outlined feature-icon">lock</span>
+          </div>
+          <div class="feature-content">
+            <span class="feature-tag">Academic Project</span>
+            <h3 class="feature-title">Safe &amp; Secure Password</h3>
+            <p class="feature-desc">
+              A Java-based password security system using Bloom filters, hashing functions, and
+              similarity metrics to prevent weak and similar passwords, enhancing user security.
+            </p>
+            <div class="feature-tags">
+              <span class="chip">Java</span>
+              <span class="chip">Bloom Filters</span>
+              <span class="chip">Hashing</span>
+            </div>
+            <div class="feature-actions">
+              <a href="https://github.com/Shoyebahmmed/Safe-Password/tree/master" target="_blank" class="hype_git_button">
+                <img src="github.png" alt="Hover Image">
+                <span>See the Code</span>
+              </a>
+              <div class="read-more-link" onclick="showOverflow('project4')">Read More <span class="material-symbols-outlined">arrow_forward</span></div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
-    
+
     <div class="overflow-screen" id="overflowScreen">
     </div>
 
@@ -176,7 +571,7 @@
           As the visionary group leader of a remarkable university project, I am thrilled to present "Breath," an innovative asthma management application that merges groundbreaking research with cutting-edge technology. Breath is a powerful tool that puts individuals in control of their asthma, offering a higher quality of life.
         </p>
         <a href="https://github.com/Shoyebahmmed/Breath_APP_Front/tree/master" target="_blank" class="hype_git_button">
-          <img src="github.png" alt="Hover Image"> 
+          <img src="github.png" alt="Hover Image">
           <span>See the Code</span>
         </a>
         <h3>Key Features:</h3>
@@ -188,11 +583,11 @@
           <li><b>Medication Reminder:</b> Timely notifications promoting adherence to prescribed schedules, crucial for preventing asthma exacerbations.</li>
           <li><b>Insights into Asthma Attacks:</b> Valuable data on the frequency and patterns of asthma attacks, empowering users and healthcare providers to optimize treatment plans for better well-being.</li>
         </ul>
-    
+
         <p class="description">
           Breath boasts an exceptional user interface, skillfully crafted by our talented team, guaranteeing a seamless and engaging experience. From concept to meticulous implementation, our project showcases the synergy of research, innovation, and dedication.
         </p>
-    
+
         <h3>Tools and Technologies:</h3>
         <ul class="feature-list">
           <li><b>Mobile App Development:</b> React Native</li>
@@ -201,7 +596,7 @@
           <li><b>Cloud Services:</b> AWS S3 (Simple Storage Service) for media file storage, AWS RDS (Relational Database Service) for managing data, Glitch server (for hosting server)</li>
           <li><b>Collaboration & Development Tools:</b> Visual Studio Code (as the primary code editor for the project), Adobe XD (for UI/UX design)</li>
         </ul>
-    
+
         <p class="awards">
           This significant project involved designing and developing an innovative application, serving as the final requirement for my bachelor's degree. As the team leader, I guided a group of six members throughout the project, using Adobe XD for design, React Native for frontend, and Node.js for the backend. The project received widespread acclaim, and our team was awarded the first prize for our outstanding achievements.
         </p>
@@ -211,7 +606,7 @@
       </div>
     </div>
 
-    
+
 
     <div id="project2" class="container" style="display: none;">
       <div class="container">
@@ -219,19 +614,19 @@
         <p class="description">
           The "Digital Library Management System" is a dynamic web application designed to revolutionize library management, offering users convenient access to a wide range of digital resources, including books, textbooks, and workbooks.
         </p>
-    
+
         <a href="https://github.com/Shoyebahmmed/Library-Management-Project/tree/master" target="_blank" class="hype_git_button">
-          <img src="github.png" alt="Hover Image"> 
+          <img src="github.png" alt="Hover Image">
           <span>See the Code</span>
         </a>
-    
+
         <h3>Key Features:</h3>
         <ul class="feature-list">
           <li><b>User Roles:</b> Librarian and Borrower, with respective functionalities.</li>
           <li><b>Resource Management:</b> Librarians can insert, update, and search resources.</li>
           <li><b>Borrower Interaction:</b> Borrowers can explore, borrow, and extend borrowing.</li>
         </ul>
-    
+
         <h3>Tools and Technologies:</h3>
         <ul class="feature-list">
           <li><b>Development Languages:</b></li>
@@ -254,19 +649,19 @@
             <li>XAMPP Server</li>
           </ul>
         </ul>
-        
-    
+
+
         <p class="awards">
           I completed this assignment as part of one of my university courses. The task was to create a web application for managing libraries within a two-week deadline. I successfully designed the database, implemented the required functions, and utilized PHP for backend development. While I focused more on functionality than UI due to time constraints, I managed to complete the project with a score of 70%.
         </p>
         <p class="results">Results: Scored 70%</p>
-    
+
         <div class="close-button" onclick="closeOverflow()">Close</div>
       </div>
     </div>
-    
-    
-    
+
+
+
     <div id="project3" class="container" style="display: none;">
       <div class="container">
         <h2 class="project-title">Kid Nursery Management System - A Comprehensive Solution for Childcare Providers</h2>
@@ -291,13 +686,13 @@
           <li><b>Database Servesises:</b> SQlite, DB Browser</li>
           <li><b>Development Tools:</b> Android Studio, Adobe XD</li>
         </ul>
-    
+
         <h3>Achievement:</h3>
         <p class="awards">
           I completed this assignment as part of one of my university courses. The task was to create a web application for managing libraries within a two-week deadline. I successfully designed the database, implemented the required functions, and utilized PHP for backend development. While I focused more on functionality than UI due to time constraints, I managed to complete the project with a score of 70%.
         </p>
         <p class="results">Results: Scored 70%</p>
-    
+
         <div class="close-button" onclick="closeOverflow()">Close</div>
       </div>
     </div>
@@ -309,12 +704,12 @@
         <p class="description">
           In this comprehensive security project, I leveraged advanced techniques like Bloom filters, hash functions, and similarity metrics to tackle critical password security challenges. By applying robust methodologies, I successfully addressed common weaknesses in password selection and storage.
         </p>
-    
+
         <a href="https://github.com/Shoyebahmmed/Safe-Password/tree/master" target="_blank" class="hype_git_button">
-          <img src="github.png" alt="Hover Image"> 
+          <img src="github.png" alt="Hover Image">
           <span>See the Code</span>
         </a>
-    
+
         <h3>Key Features:</h3>
         <ul class="feature-list">
           <li><b>Utilized 15 Hashing Functions:</b> To ensure strong password protection.</li>
@@ -323,7 +718,7 @@
           <li><b>Applied Cryptographic Hashing Functions:</b> MD5 and SHA256 to enhance the security of stored passwords.</li>
           <li><b>Utilized Bigrams and Jaccard Coefficients:</b> To measure password similarities and identify potential threats.</li>
         </ul>
-    
+
         <h3>Features:</h3>
         <h4>Security Measures:</h4>
         <ul class="feature-list">
@@ -331,24 +726,146 @@
           <li><b>Hashing Functions</b></li>
           <li><b>Cryptographic Hashing</b></li>
         </ul>
-        
+
         <h4>Testing and Implementation:</h4>
         <ul class="feature-list">
           <li><b>Testing on Datasets</b></li>
         </ul>
-        
+
         <h4>Development Tools:</h4>
         <ul class="feature-list">
           <li><b>Java</b></li>
           <li><b>Replit.io</b></li>
         </ul>
-        
+
         <h3>Achievement:</h3>
         <p class="awards">
           This project was done for the System Security course's final assignment. The objective was to create a system that prevents users from using frequently used passwords. I used Java to find a solution, generating random strings of 20 characters as salt and creating new passwords that combine salt and user passwords to store them securely. The project met all the requirements and received a score of 92%.
         </p>
         <p class="results">Results: Scored 92%</p>
-    
+
+        <div class="close-button" onclick="closeOverflow()">Close</div>
+      </div>
+    </div>
+
+
+    <div id="project5" class="container" style="display: none;">
+      <div class="container">
+        <h2 class="project-title">SmartPropGuide: Property Analytics & Reporting</h2>
+        <p class="description">
+          Developed as part of a professional placement at SmartPropGuide Pty Ltd, this platform serves real
+          estate and property operations by using Python to streamline property information, data analytics,
+          and reporting capabilities. The work bridges day-to-day operational workflows with information
+          systems theory to analyze property metrics effectively.
+        </p>
+
+        <a href="https://github.com/Shoyebahmmed/SmartPropGuid_Report_Gen_Gemini" target="_blank" class="hype_git_button">
+          <img src="github.png" alt="Hover Image">
+          <span>See the Code</span>
+        </a>
+
+        <h3>Key Skills Demonstrated:</h3>
+        <ul class="feature-list">
+          <li><b>Python Development:</b> Built core tooling and automation for property reporting workflows.</li>
+          <li><b>Property Data Management:</b> Structured and organized property information for consistent, reliable reporting.</li>
+          <li><b>Analytics Implementation:</b> Implemented analytics features to surface actionable property metrics.</li>
+          <li><b>Information Systems Theory:</b> Applied academic information systems concepts to real-world business operations.</li>
+        </ul>
+
+        <h3>Tools and Technologies:</h3>
+        <ul class="feature-list">
+          <li><b>Language:</b> Python</li>
+          <li><b>Domain:</b> Real Estate & Property Operations</li>
+        </ul>
+
+        <p class="awards">
+          Role: Developer — Professional Experience / Work Placement at SmartPropGuide Pty Ltd.
+        </p>
+
+        <div class="close-button" onclick="closeOverflow()">Close</div>
+      </div>
+    </div>
+
+
+    <div id="project6" class="container" style="display: none;">
+      <div class="container">
+        <h2 class="project-title">EduSaaS: Multi-Tenant Educational ERP Platform</h2>
+        <p class="description">
+          EduSaaS is a multi-tenant Software-as-a-Service Educational Resource Planning (ERP) platform designed
+          for schools, colleges, and training institutes. Built on a modular monolithic architecture, it isolates
+          institution data using database row-level security while maintaining a shared backend schema. It manages
+          student enrollment, attendance, grade tracking, fees, and multi-role administrative access across web
+          and mobile interfaces.
+        </p>
+
+        <a href="https://github.com/Shoyebahmmed/EduSaaS_Educattor" target="_blank" class="hype_git_button">
+          <img src="github.png" alt="Hover Image">
+          <span>See the Code</span>
+        </a>
+
+        <h3>Key Features:</h3>
+        <ul class="feature-list">
+          <li><b>Multi-Tenant Architecture:</b> A single shared backend schema serving multiple institutions securely.</li>
+          <li><b>Data Isolation:</b> Row-level security in PostgreSQL to keep each institution's data separate.</li>
+          <li><b>Core School Operations:</b> Student enrollment, attendance, grade tracking, and fee management.</li>
+          <li><b>Multi-Role Access:</b> Role-based administrative access across web and mobile clients.</li>
+        </ul>
+
+        <h3>Tools and Technologies:</h3>
+        <ul class="feature-list">
+          <li><b>Language:</b> TypeScript</li>
+          <li><b>Backend:</b> Node.js (NestJS)</li>
+          <li><b>Mobile:</b> React Native</li>
+          <li><b>Database:</b> PostgreSQL</li>
+        </ul>
+
+        <h3>Key Skills Demonstrated:</h3>
+        <p class="awards">
+          Multi-tenant architecture design, TypeScript backend engineering, database schema isolation
+          (PostgreSQL/Prisma), and cross-platform mobile development with React Native.
+        </p>
+
+        <div class="close-button" onclick="closeOverflow()">Close</div>
+      </div>
+    </div>
+
+
+    <div id="project7" class="container" style="display: none;">
+      <div class="container">
+        <h2 class="project-title">Catalyst: Restaurant POS & Management SaaS</h2>
+        <p class="description">
+          Catalyst is a dedicated Point-of-Sale and management SaaS application tailored for restaurants and
+          cafés. It digitizes the end-to-end dining workflow — from table order taking and routing tickets to
+          back-of-house kitchen teams, to floor resource handling, dynamic menu configuration, and customer
+          experience tracking.
+        </p>
+
+        <a href="https://github.com/Shoyebahmmed/Catalyst" target="_blank" class="hype_git_button">
+          <img src="github.png" alt="Hover Image">
+          <span>See the Code</span>
+        </a>
+
+        <h3>Key Features:</h3>
+        <ul class="feature-list">
+          <li><b>Table & Order Management:</b> Digital order taking with real-time ticket routing to the kitchen.</li>
+          <li><b>Floor Resource Handling:</b> Manage tables, staff, and service flow from a single interface.</li>
+          <li><b>Dynamic Menu Configuration:</b> Flexible menu setup for changing offerings and pricing.</li>
+          <li><b>Customer Experience Tracking:</b> Insights into service quality and dining experience.</li>
+        </ul>
+
+        <h3>Tools and Technologies:</h3>
+        <ul class="feature-list">
+          <li><b>Mobile App Development:</b> React Native</li>
+          <li><b>Backend Development:</b> Node.js</li>
+          <li><b>Database:</b> MySQL</li>
+        </ul>
+
+        <h3>Key Skills Demonstrated:</h3>
+        <p class="awards">
+          Mobile app development using React Native, real-time workflow logic for service industries, order
+          state management, and MySQL database management.
+        </p>
+
         <div class="close-button" onclick="closeOverflow()">Close</div>
       </div>
     </div>
@@ -357,110 +874,117 @@
 
 
     <div class="contact-section" id="contact">
-        <h2 class="cont_title">Contact Me</h2>
-        <p style="font-size: 14px; margin-bottom: 20px;">Feel free to reach out to me using any of these contact options:</p>
-        <div class="contact-social">
-            <a href="mailto:ahmmad.ef22@gmail.com" target="_blank" rel="noopener noreferrer">
-                <img src="email.png" alt="Gmail">
-            </a>
-            <a href="https://www.linkedin.com/in/shoyebahmmed/" target="_blank" rel="noopener noreferrer">
-                <img src="linkedin.png" alt="LinkedIn">
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=100006007036837" target="_blank" rel="noopener noreferrer">
-                <img src="facebook.png" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com/shoyebahmmad/" target="_blank" rel="noopener noreferrer">
-                <img src="instagram.png" alt="Instagram">
-            </a>
-            <a href="https://github.com/Shoyebahmmed" target="_blank" rel="noopener noreferrer">
-                <img src="github.png" alt="GitHub">
-            </a>
-        </div>
-        <p style="font-size: 14px; margin-top: 20px;">I'm looking forward to hearing from you!</p>
+      <p class="eyebrow reveal light">Let's Connect</p>
+      <h2 class="cont_title reveal">Contact Me</h2>
+      <p class="contact-sub reveal">Feel free to reach out to me using any of these contact options — I'm looking forward to hearing from you!</p>
+      <div class="contact-social reveal">
+        <a href="mailto:ahmmad.ef22@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+          <img src="email.png" alt="Gmail">
+        </a>
+        <a href="https://www.linkedin.com/in/shoyebahmmed/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100006007036837" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <img src="facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/shoyebahmmad/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="instagram.png" alt="Instagram">
+        </a>
+        <a href="https://github.com/Shoyebahmmed" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <img src="github.png" alt="GitHub">
+        </a>
+      </div>
     </div>
 
-    </div>
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Shoyeb Ahmmed. Built with HTML, CSS &amp; JavaScript.</p>
+    </footer>
+
+  </div>
 </body>
 
 <script>
 
-// document.addEventListener("scroll", function() {
-//   const section = document.getElementById("prof_img");
-//   const sectionPosition = section.getBoundingClientRect();
+  document.getElementById("main-content").style.display = "none";
+  const loadingFrame = document.getElementById("loading-frame");
+  const loadingContainer = document.getElementById("loading-container");
+  const mainContent = document.getElementById("main-content");
+  const prof_img = document.getElementById("prof_img");
+  const intro = document.getElementById("intro");
 
-//   // Check if the section is partially visible
-//   if (sectionPosition.top < window.innerHeight) {
-//     section.classList.add("profile_pic_visible");
-//   }
-// });
+  function revealSite() {
+    setTimeout(function () {
+      fadeOut(loadingContainer, 400);
+      setTimeout(function () {
+        mainContent.style.display = "block";
+        fadeIn(mainContent, 700);
 
+        setTimeout(function () {
+          loadingContainer.style.display = "none";
+          prof_img.classList.add("profile_pic_visible");
+          intro.classList.add("intro_visible");
+          if (typeof updateActiveNav === "function") updateActiveNav();
+        }, 700);
+      }, 350);
+    }, 600);
+  }
 
-document.getElementById("main-content").style.display = "none";
-const loadingFrame = document.getElementById("loading-frame");
-const loadingContainer = document.getElementById("loading-container");
-const mainContent = document.getElementById("main-content");
-const prof_img = document.getElementById("prof_img");
-const intro = document.getElementById("intro");
+  // The iframe can finish loading before this script attaches its
+  // listener (especially on fast connections), so also check whether
+  // it has already completed rather than relying solely on the event.
+  let revealed = false;
+  function revealOnce() {
+    if (revealed) return;
+    revealed = true;
+    revealSite();
+  }
 
-loadingFrame.addEventListener("load", function() {
-  // Hide the loading screen after a delay
-  setTimeout(function() {
-    fadeOut(loadingContainer, 500); // Fade out loading screen over 0.5 seconds
-    setTimeout(function() {
-      mainContent.style.display = "block";
-      fadeIn(mainContent, 1000); // Fade in main content over 1 second
-
-      // Trigger the animation for the section
-
-      
-      setTimeout(function() {
-        loadingContainer.style.display = "none";
-        prof_img.classList.add("profile_pic_visible");
-        intro.classList.add("intro_visible");
-      }, 1000); // Hide loading container after fade-in animation
-    }, 500); // Show main content after 0.5 second of fading out loading screen
-  }, 3000); // Show loading screen for 1 second
-});
-
-// Function to fade in an element over a specified duration
-function fadeIn(element, duration) {
-  let opacity = 0;
-  const interval = 50; // Interval for opacity change
-
-  element.style.opacity = opacity;
-  element.style.display = "block";
-
-  const fadeInInterval = setInterval(function() {
-    opacity += interval / duration;
-    element.style.opacity = opacity;
-
-    if (opacity >= 1) {
-      clearInterval(fadeInInterval);
+  try {
+    if (loadingFrame.contentDocument && loadingFrame.contentDocument.readyState === "complete") {
+      revealOnce();
+    } else {
+      loadingFrame.addEventListener("load", revealOnce);
     }
-  }, interval);
-}
+  } catch (e) {
+    loadingFrame.addEventListener("load", revealOnce);
+  }
+  // Safety net in case neither path fires for any reason.
+  setTimeout(revealOnce, 4000);
 
-// Function to fade out an element over a specified duration
-function fadeOut(element, duration) {
-  let opacity = 1;
-  const interval = 50; // Interval for opacity change
+  function fadeIn(element, duration) {
+    let opacity = 0;
+    const interval = 50;
 
-  const fadeOutInterval = setInterval(function() {
-    opacity -= interval / duration;
     element.style.opacity = opacity;
+    element.style.display = "block";
 
-    if (opacity <= 0) {
-      clearInterval(fadeOutInterval);
-      element.style.display = "none";
-    }
-  }, interval);
-}
+    const fadeInInterval = setInterval(function () {
+      opacity += interval / duration;
+      element.style.opacity = opacity;
+
+      if (opacity >= 1) {
+        clearInterval(fadeInInterval);
+      }
+    }, interval);
+  }
+
+  function fadeOut(element, duration) {
+    let opacity = 1;
+    const interval = 50;
+
+    const fadeOutInterval = setInterval(function () {
+      opacity -= interval / duration;
+      element.style.opacity = opacity;
+
+      if (opacity <= 0) {
+        clearInterval(fadeOutInterval);
+        element.style.display = "none";
+      }
+    }, interval);
+  }
 
 
-
-
-
-function reloadPage() {
+  function reloadPage() {
     location.reload();
   }
 
@@ -468,7 +992,7 @@ function reloadPage() {
     const element = document.querySelector(target);
     if (element) {
       window.scrollTo({
-        top: element.offsetTop,
+        top: element.offsetTop - 70,
         behavior: 'smooth'
       });
     }
@@ -476,218 +1000,279 @@ function reloadPage() {
 
   function handleNavClick(event) {
     event.preventDefault();
-    const target = event.target.getAttribute('href');
+    const target = event.target.closest('a').getAttribute('href');
     smoothScrollTo(target);
+    closeMobileNav();
   }
 
-  const navLinks = document.querySelectorAll('.nav a');
+  const navLinks = document.querySelectorAll('.nav a, .site-footer a');
   navLinks.forEach(link => {
-    link.addEventListener('click', handleNavClick);
+    if (link.getAttribute('href') && link.getAttribute('href').startsWith('#') && link.getAttribute('href').length > 1) {
+      link.addEventListener('click', handleNavClick);
+    }
   });
 
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinksContainer = document.getElementById('navLinks');
+  const navScrim = document.getElementById('navScrim');
+
+  function openMobileNav() {
+    navLinksContainer.classList.add('open');
+    navToggle.classList.add('open');
+    navScrim.classList.add('open');
+    navToggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMobileNav() {
+    navLinksContainer.classList.remove('open');
+    navToggle.classList.remove('open');
+    navScrim.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  navToggle.addEventListener('click', function () {
+    if (navLinksContainer.classList.contains('open')) {
+      closeMobileNav();
+    } else {
+      openMobileNav();
+    }
+  });
+
+  navScrim.addEventListener('click', closeMobileNav);
+
+  // Scroll-spy for nav active state + shrink header on scroll
+  const sections = ['home', 'about', 'education', 'experience', 'skills', 'projects', 'contact']
+    .map(id => document.getElementById(id));
+  const navAnchors = document.querySelectorAll('.nav-link');
+  const siteNav = document.getElementById('siteNav');
+
+  function updateActiveNav() {
+    let current = sections[0];
+    sections.forEach(section => {
+      if (section && window.scrollY + 120 >= section.offsetTop) {
+        current = section;
+      }
+    });
+    navAnchors.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current.id);
+    });
+
+    siteNav.classList.toggle('scrolled', window.scrollY > 40);
+  }
+
+  window.addEventListener('scroll', updateActiveNav);
+  window.addEventListener('resize', updateActiveNav);
+  updateActiveNav();
+
+  // Scroll reveal animations (staggered within their own group)
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // Scoped to a CSS variable (not the transitionDelay shorthand) so this
+  // stagger only affects the .reveal fade-in and never delays the .tilt
+  // hover response on the same element — that shared-shorthand bug was
+  // why the 3D tilt felt sluggish/absent on every card past the first two.
+  document.querySelectorAll('.about-stats, .skills-grid, .featured-projects, .education-timeline, .timeline').forEach(group => {
+    Array.from(group.children).forEach((child, i) => {
+      child.style.setProperty('--reveal-delay', Math.min(i * 90, 360) + 'ms');
+    });
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Reduced-motion aware: skip interactive extras for users who asked for less motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 3D tilt-on-hover for cards
+  if (!prefersReducedMotion && window.matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.tilt').forEach(card => {
+      let raf = null;
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        if (raf) cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(() => {
+          card.style.transform = `perspective(900px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-6px)`;
+        });
+      });
+      card.addEventListener('mouseleave', () => {
+        if (raf) cancelAnimationFrame(raf);
+        card.style.transform = '';
+      });
+    });
+
+    // Magnetic hero buttons
+    document.querySelectorAll('.magnetic').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = e.clientX - r.left - r.width / 2;
+        const y = e.clientY - r.top - r.height / 2;
+        btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = '';
+      });
+    });
+
+    // Parallax glow blobs in the hero, following the cursor
+    const glow1 = document.getElementById('glow1');
+    const glow2 = document.getElementById('glow2');
+    const heroEl = document.getElementById('home');
+    if (glow1 && glow2 && heroEl) {
+      heroEl.addEventListener('mousemove', (e) => {
+        const nx = e.clientX / window.innerWidth - 0.5;
+        const ny = e.clientY / window.innerHeight - 0.5;
+        glow1.style.transform = `translate(${nx * 40}px, ${ny * 40}px)`;
+        glow2.style.transform = `translate(${nx * -30}px, ${ny * -30}px)`;
+      });
+    }
+  }
+
+  // Infinite marquee rows for the Skills section (built from a shared icon list, split in half)
+  const marqueeIcons = [
+    ['python', 'Python'], ['openjdk', 'Java'], ['typescript', 'TypeScript'], ['javascript', 'JavaScript'],
+    ['cplusplus', 'C++'], ['c', 'C'], ['html5', 'HTML5'], ['css', 'CSS3'], ['react', 'React'],
+    ['nodedotjs', 'Node.js'], ['nestjs', 'NestJS'], ['php', 'PHP'], ['mysql', 'MySQL'],
+    ['postgresql', 'PostgreSQL'], ['mongodb', 'MongoDB'], ['firebase', 'Firebase'], ['sqlite', 'SQLite'],
+    ['git', 'Git'], ['github', 'GitHub'], ['figma', 'Figma'], ['androidstudio', 'Android Studio']
+  ];
+
+  function buildMarquee(trackId, items) {
+    const track = document.getElementById(trackId);
+    if (!track) return;
+    const chipsHtml = items.map(([slug, label]) =>
+      `<span class="marquee-chip"><img src="https://cdn.simpleicons.org/${slug}" alt="" loading="lazy">${label}</span>`
+    ).join('');
+    // Duplicated once for a seamless -50% loop
+    track.innerHTML = chipsHtml + chipsHtml;
+  }
+
+  const half = Math.ceil(marqueeIcons.length / 2);
+  buildMarquee('marqueeTrack1', marqueeIcons.slice(0, half));
+  buildMarquee('marqueeTrack2', marqueeIcons.slice(half));
 
 
-function showEducation(event) {
+  function showOverflow(projectID) {
+    const overflowScreen = document.getElementById("overflowScreen");
+    const projectContent = document.getElementById(projectID);
+    const contentToCopy = projectContent.innerHTML;
+    overflowScreen.innerHTML = contentToCopy;
 
-    const education = `
-    <div class="education">
-  <h2 class="section-title">Education</h2>
-  <div class="education-list">
-    <div class="education-item">
-      <div class="education-content">
-        <h3 class="university-name">University of Wollongong</h3>
-        <p class="date">2022 – 2023</p>
-        <p class="degree">Bachelor of Computer Science</p>
-        <p class="description">
-          Completed all subjects and awaiting results. Expected completion of Master's degree in 2025.
-        </p>
-      </div>
-    </div>
-    <div class="education-item">
-      <div class="education-content">
-        <h3 class="university-name">University of Wollongong in Dubai</h3>
-        <p class="date">2019 – 2021</p>
-        <p class="degree">Bachelor of Computer Science</p>
-        <p class="description">
-          Finished my 3rd year and transferred to the University of Wollongong, Australia.
-        </p>
-      </div>
-    </div>
-    <div class="education-item">
-      <div class="education-content">
-        <h3 class="university-name">Dr. Mahbubur Rahman Mollah College</h3>
-        <p class="date">2015 – 2017</p>
-        <p class="degree">Higher Secondary Certificate</p>
-        <p class="description">
-          Completed my H.S.C. in Science from Bangladesh with a GPA of 4.5.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+    overflowScreen.classList.add("active");
+  }
 
-    `;
+  function closeOverflow() {
+    const overflowScreen = document.getElementById("overflowScreen");
+    overflowScreen.classList.add("closing");
 
-  event.preventDefault();
-  document.querySelector('.about-pic img').src = 'education.jpg';
-  const detailsElement = document.querySelector('.details p');
-  detailsElement.innerHTML = education;
-  detailsElement.classList.add('fadeInContent');
-  document.getElementById('education-link').classList.add('active');
-    document.getElementById('projects-link').classList.remove('active');
-    document.getElementById('skills-link').classList.remove('active');
-}
+    setTimeout(function () {
+      overflowScreen.classList.remove("active");
+      overflowScreen.classList.remove("closing");
+      overflowScreen.innerHTML = "";
+    }, 300);
+  }
 
+</script>
 
-function showSkills(event) {
-    const programmingSkills = `
-<div class="skill_cont">    
-<div class="skills-item">
-    <h3>Programming Languages</h3>
-    <p>Java - 80%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 80%"></div>
-        <div class="skill-left"></div>
-    </div>
-    <p>C - 70%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 70%"></div>
-        <div class="skill-left"></div>
-    </div>
-    <p>C++ - 75%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 75%"></div>
-        <div class="skill-left"></div>
-    </div>
-    <p>Python - 85%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 85%"></div>
-        <div class="skill-left"></div>
-    </div>
-</div>
+<script type="module">
+  // Subtle 3D wireframe accent behind the hero portrait. Progressive
+  // enhancement: if three.js fails to load (offline, CDN hiccup), the
+  // hero still looks complete without it.
+  (async () => {
+    const canvas = document.getElementById('hero3d');
+    if (!canvas) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // Skip on small screens: the wireframe halo needs a fairly large
+    // container to read as an open, airy shape — in a small portrait-sized
+    // box its edges pack too densely per pixel and just look like a solid
+    // smudge instead. Not worth it on mobile, where it'd also cost battery.
+    if (window.matchMedia('(max-width: 900px)').matches) return;
 
-<div class="skills-item">
-    <h3>Web Development</h3>
-    <p>HTML - 90%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 90%"></div>
-        <div class="skill-left"></div>
-    </div>
-    <p>CSS - 85%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 85%"></div>
-        <div class="skill-left"></div>
-    </div>
-    <p>JavaScript - 80%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 80%"></div>
-        <div class="skill-left"></div>
-    </div>
-    <p>PHP - 70%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 70%"></div>
-        <div class="skill-left"></div>
-    </div>
-    <p>React - 75%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 75%"></div>
-        <div class="skill-left"></div>
-    </div>
-    <p>React Native - 80%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 80%"></div>
-        <div class="skill-left"></div>
-    </div>
-    <p>Node.js - 70%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 70%"></div>
-        <div class="skill-left"></div>
-    </div>
-</div>
+    try {
+      const THREE = await import('https://unpkg.com/three@0.160.0/build/three.module.js');
 
-<div class="skills-item">
-    <h3>Database Management</h3>
-    <p>MySQL - 85%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 85%"></div>
-        <div class="skill-left"></div>
-    </div>
-    <p>MongoDB - 75%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 75%"></div>
-        <div class="skill-left"></div>
-    </div>
-    <p>AWS RDS - 70%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 70%"></div>
-        <div class="skill-left"></div>
-    </div>
-    <p>Firebase - 80%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 80%"></div>
-        <div class="skill-left"></div>
-    </div>
-</div>
+      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
 
-<div class="skills-item">
-    <h3>Other Skills</h3>
-    <p>UI/UX Design - 75%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 75%"></div>
-        <div class="skill-left"></div>
-    </div>
-    <p>Git - 80%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 80%"></div>
-        <div class="skill-left"></div>
-    </div>
-    <p>Agile Development - 70%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 70%"></div>
-        <div class="skill-left"></div>
-    </div>
-    <p>Problem Solving - 85%</p>
-    <div class="skill-bar">
-        <div class="skill-progress" style="--skill-width: 85%"></div>
-        <div class="skill-left"></div>
-    </div>
-</div>
-</div>
-`;
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+      camera.position.z = 6.5;
 
-  event.preventDefault();
-  document.querySelector('.about-pic img').src = 'skills.jpg';
-  document.querySelector('.details p').innerHTML = programmingSkills;
-  document.getElementById('education-link').classList.remove('active');
-    document.getElementById('projects-link').classList.remove('active');
-    document.getElementById('skills-link').classList.add('active');
-}
+      // Low-detail (undivided) icosahedron: few, widely-spaced edges so it
+      // reads as an airy wireframe halo rather than a dense, near-solid mesh.
+      // Rendered over the hero's solid orange panel now, so it uses light
+      // colors for contrast instead of more orange-on-orange.
+      const geometry = new THREE.IcosahedronGeometry(1.7, 0);
+      const material = new THREE.MeshBasicMaterial({
+        color: 0xffffff,
+        wireframe: true,
+        transparent: true,
+        opacity: 0.28
+      });
+      const mesh = new THREE.Mesh(geometry, material);
+      scene.add(mesh);
 
+      const innerGeometry = new THREE.IcosahedronGeometry(1.05, 0);
+      const innerMaterial = new THREE.MeshBasicMaterial({
+        color: 0xfff3e0,
+        wireframe: true,
+        transparent: true,
+        opacity: 0.18
+      });
+      const innerMesh = new THREE.Mesh(innerGeometry, innerMaterial);
+      scene.add(innerMesh);
 
+      const wrap = canvas.parentElement;
 
+      function resize() {
+        const w = wrap.clientWidth || 1;
+        const h = wrap.clientHeight || 1;
+        renderer.setSize(w, h, false);
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+      }
+      resize();
+      window.addEventListener('resize', resize);
 
-function showOverflow(projectID) {
-  const overflowScreen = document.getElementById("overflowScreen");
-  const projectContent = document.getElementById(projectID);
-  const contentToCopy = projectContent.innerHTML;
-  overflowScreen.innerHTML = contentToCopy;
+      let mouseX = 0, mouseY = 0;
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX / window.innerWidth - 0.5;
+        mouseY = e.clientY / window.innerHeight - 0.5;
+      });
 
-  overflowScreen.classList.add("active");
-}
+      let heroVisible = true;
+      new IntersectionObserver((entries) => {
+        heroVisible = entries[0].isIntersecting;
+      }).observe(canvas);
 
-function closeOverflow() {
-  const overflowScreen = document.getElementById("overflowScreen");
-  overflowScreen.classList.add("closing");
-
-  setTimeout(function () {
-    overflowScreen.classList.remove("active");
-    overflowScreen.classList.remove("closing");
-    overflowScreen.innerHTML = "";
-  }, 300);
-}
-
-
-
+      function animate() {
+        requestAnimationFrame(animate);
+        if (!heroVisible) return;
+        mesh.rotation.x += 0.0022;
+        mesh.rotation.y += 0.0032;
+        innerMesh.rotation.x -= 0.0016;
+        innerMesh.rotation.y -= 0.0026;
+        camera.position.x += (mouseX * 1.4 - camera.position.x) * 0.04;
+        camera.position.y += (-mouseY * 1.4 - camera.position.y) * 0.04;
+        camera.lookAt(scene.position);
+        renderer.render(scene, camera);
+      }
+      animate();
+    } catch (err) {
+      console.warn('3D hero accent skipped:', err);
+    }
+  })();
 </script>
 
 </html>
